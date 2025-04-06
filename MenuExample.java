@@ -34,7 +34,7 @@ public class MenuExample extends JFrame {
         JPanel dateAndTimePanel = new JPanel();
         dateAndTimePanel.setLayout(new GridLayout(1, 1)); 
         dateAndTimePanel.setOpaque(false); // Make the panel transparent; helps to display the background color of frame
-        dateAndTimeLabel.setHorizontalAlignment(SwingConstants.LEFT); // Align the label to the left
+        dateAndTimeLabel.setHorizontalAlignment(SwingConstants.CENTER); // Align the label to the left
         dateAndTimePanel.add(dateAndTimeLabel); 
         dateAndTimeLabel.setFont(mainFont); 
 

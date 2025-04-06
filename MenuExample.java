@@ -82,18 +82,18 @@ public class MenuExample extends JFrame {
         setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         
         
-        // Add menu items to the menu
+        // Add menu items to the functions menu
         functionsMenu.add(menuItem1);
         functionsMenu.add(menuItem2);
         functionsMenu.add(menuItem3);
         functionsMenu.add(menuItem4);
+        // Add functions menu to the menu bar
         menuBar.add(functionsMenu);
         // Add the menu bar to the frame
         setJMenuBar(menuBar);
         // Add the date and time panel to the frame
         add(dateAndTimePanel);
         setVisible(true);
-
     }
 
     public static void main(String[] args) {

@@ -61,5 +61,3 @@ public class MenuExampleUtilities {
         return Color.getHSBColor(hue, saturation, brightness);
     }
 }
-
-

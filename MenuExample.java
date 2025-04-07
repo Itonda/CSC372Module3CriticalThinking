@@ -58,8 +58,9 @@ public class MenuExample extends JFrame {
 
         menuItem2.addActionListener(e -> {
             // Export the date and time to a text file
+            String content = dateAndTimeLabel.getText();
             String filename = "log.txt";
-            MenuExampleUtilities.exportToTextFile(filename);
+            MenuExampleUtilities.exportToTextFile(content, filename);
         });
 
         menuItem3.addActionListener(e -> {

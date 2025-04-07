@@ -16,7 +16,7 @@ public class MenuExampleUtilities {
     }
     
     // Method to export dateAndTimeLabel to a text file
-    public static void exportToTextFile(String filename) {
+    public static void exportToTextFile(String content, String filename) {
         String directoryPath = "C:\\Temp\\"; 
         File directory = new File(directoryPath);
 
@@ -29,7 +29,6 @@ public class MenuExampleUtilities {
         }
 
         String filePath = directoryPath + filename;
-        String content = MenuExample.dateAndTimeLabel.getText();
 
         // Check if the label content is empty or null or only whitespaces
         if (content == null || content.trim().isEmpty()) { 

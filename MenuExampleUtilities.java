@@ -1,4 +1,4 @@
-import java.util.Random;
+
 import java.awt.Color;
 import java.io.PrintWriter;
 import javax.swing.JOptionPane; 
@@ -17,10 +17,13 @@ public class MenuExampleUtilities {
     
     // Method to export dateAndTimeLabel to a text file
     public static void exportToTextFile(String content, String filename) {
-        String directoryPath = "C:\\Temp\\"; 
-        File directory = new File(directoryPath);
+        String directoryPath = 
+        System.getProperty("user.home") + 
+        File.separator + "Temp" + 
+        File.separator;
 
         // Check if directory exists, create if not
+        File directory = new File(directoryPath);
         if (!directory.exists()) {
             if (!directory.mkdirs()) {
                 handleExportError("Could not create directory: " + directoryPath, "Directory Error");
@@ -51,12 +54,9 @@ public class MenuExampleUtilities {
 
     // Method to get random green hue
     public static Color getRandomGreenHue() {
-        Random random = new Random();
 
-        float hue = 0.25f + (0.17f * random.nextFloat()); // 90°–150° in HSB
-        float saturation = 1.0f;
-        float brightness = 1.0f;
-
-        return Color.getHSBColor(hue, saturation, brightness);
+        float hue = 0.25f + (float)Math.random() * 0.1f; // Green hue range
+        Color greenHue = Color.getHSBColor(hue, 0.8f, 0.8f);
+        return greenHue;
     }
 }

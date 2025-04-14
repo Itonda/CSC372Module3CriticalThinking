@@ -31,12 +31,11 @@ public class MenuExample extends JFrame {
         getContentPane().setBackground(initialColor);
 
         // Panel to hold the date and time label
-        JPanel dateAndTimePanel = new JPanel();
-        dateAndTimePanel.setLayout(new GridLayout(1, 1)); 
+        JPanel dateAndTimePanel = new JPanel(new BorderLayout()); // Use GridBagLayout to center components
         dateAndTimePanel.setOpaque(false); // Make the panel transparent; helps to display the background color of frame
-        dateAndTimeLabel.setHorizontalAlignment(SwingConstants.CENTER); // Align the label to the center
-        dateAndTimePanel.add(dateAndTimeLabel); 
         dateAndTimeLabel.setFont(mainFont); 
+        dateAndTimePanel.add(dateAndTimeLabel, BorderLayout.CENTER); // Add the label to the panel
+        dateAndTimeLabel.setHorizontalAlignment(SwingConstants.CENTER); // Set the label to be centered in the panel
 
         // Panel to hold the color square
         JPanel colorSquare = new JPanel();
